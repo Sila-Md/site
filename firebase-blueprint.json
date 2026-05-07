@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "Subdomain": {
+      "title": "Subdomain Listing",
+      "description": "Stores the subdomain services shown on the homepage.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "subdomain": { "type": "string" },
+        "desc": { "type": "string" },
+        "iconName": { "type": "string" },
+        "color": { "type": "string" },
+        "bg": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["title", "subdomain", "desc", "iconName", "order"]
+    },
+    "Config": {
+      "title": "App Configuration",
+      "description": "Stores global app settings like admin access PIN.",
+      "type": "object",
+      "properties": {
+        "adminPin": { "type": "string" }
+      },
+      "required": ["adminPin"]
+    },
+    "Analytics": {
+      "title": "Site Analytics",
+      "description": "Tracks simple metrics like total visits.",
+      "type": "object",
+      "properties": {
+        "totalVisits": { "type": "number" }
+      }
+    }
+  },
+  "firestore": {
+    "/subdomains": {
+      "schema": "Subdomain",
+      "description": "Collection of all public subdomains."
+    },
+    "/configs/global": {
+      "schema": "Config",
+      "description": "Global configuration document."
+    },
+    "/stats/visitors": {
+      "schema": "Analytics",
+      "description": "Visitor tracking document."
+    }
+  }
+}
