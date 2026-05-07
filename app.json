@@ -1,0 +1,21 @@
+{
+  "name": "Sila Tech Ecosystem",
+  "description": "Digital Ecosystem for Today & Tomorrow. Built with React, Vite, and Firebase.",
+  "repository": "https://github.com/Sila-Md",
+  "logo": "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/cpu.svg",
+  "keywords": ["react", "vite", "firebase", "ecosystem"],
+  "env": {
+    "NODE_ENV": {
+      "description": "The environment to run the app in. Should be 'production' for Heroku.",
+      "value": "production"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "postinstall": "npm run build"
+  }
+}
