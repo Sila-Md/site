@@ -18,3 +18,4 @@ View your app in AI Studio: https://ai.studio/apps/0ffe0e69-7b90-40d1-bf91-68df3
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+https://dashboard.heroku.com/new?template=https://github.com/Sila-Md/site
